@@ -1,0 +1,30 @@
+{
+    "name": "Simple MLPiper runner test",
+    "engineType": "Generic",
+    "pipe": [
+        {
+            "name": "Sample Source",
+            "id": 1,
+            "type": "sample-source",
+            "parents": [],
+            "arguments": {
+                "value": "Hello World: testing string source and sink"
+            }
+        },
+        {
+            "name": "Sample Sink",
+            "id": 2,
+            "type": "sample-sink",
+            "parents": [
+                {
+                    "parent": 1,
+                    "output": 0
+                }
+            ],
+            "arguments": {
+                "expected-value": "Hello World: testing string source and sink"
+            }
+        }
+    ],
+    "systemConfig": {}
+}
